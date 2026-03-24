@@ -1,14 +1,23 @@
-import './App.css'
-import DaisyNav from './Components/Daisy-Nav/Daisy-Nav'
-import NavBar from './Components/NavBar/NavBar'
+import { Suspense } from 'react';
+import './App.css';
+import DaisyNav from './Components/Daisy-Nav/Daisy-Nav';
+import NavBar from './Components/NavBar/NavBar';
+import PricingOptions from './Components/PricingOptions/PricingOptions';
+
+
+const pricingPromise = fetch('pricingData.json')
+  .then(res => res.json())
+
 
 function App() {
 
   return (
     <>
-    {/* <DaisyNav></DaisyNav> */}
-    <NavBar></NavBar>
-      <h2 className='text-center text-2xl'>This is my first page usin tailwind with react.</h2>
+      {/* <DaisyNav></DaisyNav> */}
+      <NavBar></NavBar>
+      <Suspense fallback={<span className="loading loading-dots loading-xl"></span>}>
+        <PricingOptions pricingPromise={pricingPromise}></PricingOptions>
+      </Suspense>
     </>
   )
 }
