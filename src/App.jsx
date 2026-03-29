@@ -19,7 +19,7 @@ function App() {
     <div>
       {/* <DaisyNav></DaisyNav> */}
       <NavBar></NavBar>
-      <div className='max-w-335 mx-auto space-y-50 py-25'>
+      <div className='w-11/12 max-w-335 mx-auto space-y-25 md:space-y-40 py-25'>
         <Suspense fallback={<span className="loading loading-dots loading-xl"></span>}>
           <PricingOptions pricingPromise={pricingPromise}></PricingOptions>
         </Suspense>

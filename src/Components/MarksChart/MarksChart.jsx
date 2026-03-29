@@ -23,9 +23,9 @@ const MarksChart = ({marksPromise}) => {
     })
     console.log(marksChartsData);
     return (
-        <div>
-            <h2 className='text-2xl text-center p-2 border-b-2 border-b-primary max-w-80 mx-auto mb-8'>(Practice Task 2)</h2>
-            <BarChart width={1000} height={300} data={marksChartsData}>
+        <div >
+            <h2 className='text-2xl text-center p-2 border-b-2 border-b-primary md:max-w-80 mx-auto mb-8'>(Practice Task 2)</h2>
+            <BarChart style={{ width: '100%', maxWidth: '800px', maxHeight: '40vh', aspectRatio: 1.618 }} responsive data={marksChartsData}>
             <Tooltip></Tooltip>
             <XAxis dataKey={"name"}></XAxis>
             <YAxis></YAxis>

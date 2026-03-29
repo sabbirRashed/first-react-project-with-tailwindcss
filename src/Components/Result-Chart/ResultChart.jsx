@@ -18,7 +18,7 @@ const ResultChart = () => {
     return (
         <div>
             <h2 className='text-2xl text-center p-2 border-b-2 border-b-primary max-w-80 mx-auto mb-20'>(Practice Task 3)</h2>
-            <LineChart width={1000} height={300} data={studentsResult}>
+            <LineChart style={{ width: '100%', maxWidth: '800px', maxHeight: '40vh', aspectRatio: 1.618 }} responsive data={studentsResult}>
             <Tooltip></Tooltip>
             <XAxis dataKey={"name"}></XAxis>
             <YAxis></YAxis>

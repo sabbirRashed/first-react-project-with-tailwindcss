@@ -4,7 +4,7 @@ const DaisyPricingCard = ({ pricing }) => {
 
     const { name, price, month, features, popular } = pricing;
     return (
-        <div className="card w-96 bg-base-100 shadow-sm">
+        <div className="card mx-w-96 bg-base-100 shadow-sm">
             <div className="card-body flex flex-col">
                 {popular && <span className="badge badge-xs badge-warning">Most Popular</span>}
                 <div className="flex justify-between">
