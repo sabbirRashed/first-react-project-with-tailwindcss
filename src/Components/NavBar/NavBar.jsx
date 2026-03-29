@@ -42,22 +42,9 @@ const NavBar = () => {
     const links = navigationData.map(route => <Link key={route.id} route={route}></Link>)
 
     return (
-        <nav className='shadow-sm flex justify-between items-center px-8 py-3'>
+        <nav className='shadow-sm '>
 
-                {/* <ul className='flex p-5'>
-                    <li className='mr-5'><a href="home">Home</a></li>
-                    <li className='mr-5'><a href="/about">About</a></li>
-                    <li className='mr-5'><a href="/contact">Contact Us</a></li>
-                </ul> */}
-
-                {/* <ul className='flex p-5'>
-                    {
-                    navigationData.map(route => <li className='mr-4 p-2 hover:bg-gray-300'><a href={route.path}>{route.name}</a></li>)
-                    }
-                </ul> */}
-
-
-
+            <div className='max-w-335 mx-auto flex justify-between items-center px-8 py-3 '>
                 <span className='flex gap-2 items-center' onClick={() => { setOpen(!open) }}>
                     {open ?
                         <X className='md:hidden'></X>
@@ -74,12 +61,16 @@ const NavBar = () => {
 
                     <h2 className='font-semibold text-2xl'>Logo</h2>
                 </span>
+
                 <ul className='hidden md:flex gap-10'>
                     {
                         links
                     }
                 </ul>
+
                 <button className='btn'>Sign in</button>
+            </div>
+
         </nav>
     );
 };
